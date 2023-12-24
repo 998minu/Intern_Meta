@@ -1,0 +1,193 @@
+
+
+#navbaar1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.carousel-inner img{
+    height: 650px;
+    width: 100%;
+}
+
+.carousel-caption{
+   margin-bottom: 240px;
+
+
+}
+
+.aboutdiv{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    height: 300px;
+    margin: 10px;
+}
+.aboutdiv .firstr{ 
+
+    width: 20%;
+    border: solid 2px black;
+    height: 280px;
+    color: black;
+    margin: 10px;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-weight: 600%;
+
+}
+.head1{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*display: inline-block;
+    line-height: 24px;*/
+    color: red;
+}
+.head2{
+    font-weight: bold;
+    font-size: 20px;
+    color:black;
+    
+}
+.secbox { 
+    color: black; /* Text color for the first box */
+    padding: 10px; /* Padding to add space inside the box */
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.thirdbox { 
+    color: black; /* Text color for the first box */
+    padding: 10px; /* Padding to add space inside the box */
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.aboutmain{
+    background-color: aquamarine;
+    height: 200px;
+    width: 400px;
+}
+#about-section {
+    background: #e6e8eb;
+    height: 400px;
+    width: 100%;
+}
+.title-heading h2{
+    font-size: 40px;
+    margin-left: 350px;
+    margin-top: 0;
+
+}
+.w31-text {
+    font-style: normal;
+    padding-top: 3%;
+}
+.col-lg-3 {
+    background-color: rgb(159, 189, 199);
+    height: 200px;
+    width: 20px;
+    align-content: flex-start;
+}
+
+.py-5{
+    background: rgb(203, 187, 203);
+}
+
+.py-5 i img{
+    height: 110px;
+    width: 110px;
+}
+
+/* .content .texth{
+    margin-top: 200px;
+
+} */
+
+.content {
+    display: flex;
+    justify-content: space-between; /* This will make the sections parallel */
+    background-color: rgb(244, 240, 240);
+    padding: 100px; /* Add padding for spacing */
+  }
+  
+  .text-section {
+    width: 55%;
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+  .text-section h1{
+    margin-top: 20px;
+  }
+  
+  .text-section h6 {
+    
+    margin-top: 20px;
+  }
+ 
+  
+  .image-section img {
+    max-width: 120%; /* Ensure the image doesn't exceed its container */
+    height: auto; /* Maintain image aspect ratio */
+  }
+  #img-sec{
+    height: 200px;
+    width: 980px;
+    position: relative;
+    margin-top: 60px;
+  }
+
+.detail6{
+    background: rgb(97, 126, 155);
+    border-radius: 50px;
+    margin:20px;
+    margin-right: 80px;
+    padding: 15px;
+    width: fit-content;
+}
+.contain-con{
+    background-color: azure;
+}
+.test-upp{
+  
+    padding: 20px;
+
+}
+.test-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-direction: column;
+    
+}
+.card-con{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 200px;
+    padding-right: 200px;
+
+
+}
+.card-con .contain{
+    margin-left: 100px;
+}
+.cont-cont{
+    margin-left: 150px;
+}
+.mb-5{
+    margin-left: 10%;
+}
+.cont12{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
