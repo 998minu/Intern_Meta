@@ -15,7 +15,7 @@ const ServiceItem = ({ icon, title, description }) => (
 
 const Services = () => {
   return (
-    <section className="content">
+    <section className="content" id='services'>
       <div className="text-section">
         <h4>Why Choose Us</h4>
         <h1>The Creative Solution We Provide To Our Clients</h1>

@@ -7,22 +7,23 @@ import img1 from './src/image/1666941411213.jpeg';
 const Navbaar = () => {
   return (
     <>
+    <section id='home' >
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="#home">
             <Image src={img1} alt="Bootstrap" height={30}/>
           </a>
-          <a className="navbar-brand" href="#">Metamatic Knowledge Solution</a>
+          <a className="navbar-brand" href="#home">Metamatic Knowledge Solution</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="nav-link active" aria-current="page" href="#">Home</a>
-              <a className="nav-link" href="#h1">About us</a>
-              <a className="nav-link" href="#h2">Services</a>
-              <a className="nav-link" href="#h3">Blog</a>
-              <a className="nav-link" aria-disabled="true">Contact Info</a>
+              <a className="nav-link active" aria-current="page" href="#home">Home</a>
+              <a className="nav-link" href="#AboutUs">About us</a>
+              <a className="nav-link" href="#services">Services</a>
+              <a className="nav-link" href="#blog">Blog</a>
+              <a className="nav-link" aria-disabled="true" href='#contactus'>Contact Info</a>
             </div>
           </div>
           <form className="d-flex" role="search">
@@ -31,6 +32,7 @@ const Navbaar = () => {
           </form>
         </div>
       </nav>
+      </section>
     </>
   );
 }

@@ -11,7 +11,7 @@ import "./src/index.css";
 const Blog = () => {
   return (
     <>
-      <section>
+      <section id='blog'>
         <div className="test-upp">
           <div className="test-con">
             <h4>Insights and Trends</h4>
