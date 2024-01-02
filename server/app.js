@@ -1,39 +1,34 @@
-const { MongoClient } = require('mongodb');
-
-// MongoDB URI (replace with your actual URI)
-const uri = 'mongodb://localhost:27017';
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Connect to MongoDB
-client.connect(async (err) => {
-  if (err) {
-    console.error('MongoDB connection error:', err);
-    return;
-  }
-
-  try {
-    // Create a database
-    const databaseName = 'testdb';
-    const db = client.db(databaseName);
-
-    console.log(`Connected to database: ${databaseName}`);
-
-    // Create a collection
-    const collectionName = 'students';
-    const collection = db.collection(collectionName);
-
-    console.log(`Collection created: ${collectionName}`);
-
-    // Insert a document
-    const documentToInsert = { name: 'megha', age: 25 };
-    const result = await collection.insertOne(documentToInsert);
-
-    console.log('Document inserted:', result.ops);
-
-  } catch (error) {
-    console.error('MongoDB operation error:', error);
-  } finally {
-    // Close the connection after operations
-    client.close();
-  }
+const express = require('express');
+const app = express();
+const cors = require("cors");
+console.log("App listen at port 27017");
+app.use(express.json());
+app.use(cors());
+app.get("/", (req, resp) => {
+ 
+    resp.send("App is Working");
+    // You can check backend is working or not by 
+    // entering http://loacalhost:5000
+     
+    // If you see App is working means
+    // backend working properly
 });
+ 
+app.post("/register", async (req, resp) => {
+    try {
+        const user = new User(req.body);
+        let result = await user.save();
+        result = result.toObject();
+        if (result) {
+            delete result.password;
+            resp.send(req.body);
+            console.log(result);
+        } else {
+            console.log("User already register");
+        }
+ 
+    } catch (e) {
+        resp.send("Something Went Wrong");
+    }
+});
+app.listen(27017);

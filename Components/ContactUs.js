@@ -1,8 +1,6 @@
 "use client";
 import 'bootstrap/dist/css/bootstrap.css'
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { Data } from "./Data";
 import linkedin from "@/Components/src/image/linkedin.png";
 import twitter from "@/Components/src/image/twitter.png";
 import fb from "@/Components/src/image/facebook.png";
@@ -16,46 +14,26 @@ function ContactUs() {
   const [phonenumber, setPhoneNumber] = useState("");
 
   // retrived data state
-  const [data, setData] = useState([]);
+  //const [data, setData] = useState([]);
 
   // submit event
-  const handleSubmit = async (e) => {
+  const collectData = async(e) => {
     e.preventDefault();
-
-    // our object to pass
-    const data = {
-      Name: name,
-      Email: email,
-      Message: message,
-      PhoneNumber: phonenumber,
-    };
-    await axios
-      .post(
-        "https://sheet.best/api/sheets/1e07c208-719c-44ed-b07a-7f51a51eae97",
-        data
-      )
-      .then((response) => {
-        // console.log(response);
-        setName("");
-        setEmail("");
-        setMessage("");
-        setPhoneNumber("");
-      });
-  };
-
-  // getting data function
-  const getData = async () => {
-    await axios
-      .get("https://sheet.best/api/sheets/1e07c208-719c-44ed-b07a-7f51a51eae97")
-      .then((response) => {
-        setData(response.data);
-      });
-  };
-
-  // triggering function
-  useEffect(() => {
-    getData();
-  }, [data]);
+    try{
+    const response = await fetch('http://localhost:4000/',{
+      method:'POST',
+      body: JSON.stringify({name,email,message,phonenumber}),
+      headers:{
+        'content-Type': 'application/json'
+      },
+    });
+    const result=await response.json();
+    console.log(result);
+  } 
+  catch(error){
+    console.error(error);
+  }
+} 
 
   return (
     <section id='contactus' >
@@ -63,7 +41,7 @@ function ContactUs() {
       <br></br>
       <h1>Contact Info</h1>
       <br></br>
-      <form autoComplete="off" className="form-group" onSubmit={handleSubmit}>
+      <form autoComplete="off" className="form-group" onSubmit={collectData}>
         <label>Name</label>
         <input
           type="text"
