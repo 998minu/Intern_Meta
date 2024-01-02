@@ -5,6 +5,7 @@ import linkedin from "@/Components/src/image/linkedin.png";
 import twitter from "@/Components/src/image/twitter.png";
 import fb from "@/Components/src/image/facebook.png";
 import Image from "next/image";
+import axios from "axios";
 
 function ContactUs() {
   // form states
